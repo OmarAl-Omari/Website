@@ -1,18 +1,17 @@
 let lastScrollTop = 0;
-let header = document.querySelector('.header-grid');
-
+const header = document.getElementById("header-js");
+const threshold = 60;
 
 window.addEventListener("scroll", (event) => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    console.log(document.documentElement.scrollTop );
-    
+    const scrollDifference = currentScroll - lastScrollTop;
+
     if (currentScroll > lastScrollTop) {
         // Scrolling down
-        console.log("Scrolling down");
-        
-    } else {
+        header.style.transform = "translateY(-100%)";
+    } else if (currentScroll===0) {
         // Scrolling up
-        console.log("Scrolling up");
+        header.style.transform = "translateY(0)";
     }
     
     lastScrollTop = currentScroll;
