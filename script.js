@@ -5,10 +5,10 @@ window.addEventListener("scroll", (event) => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll===0) {
-        // Scrolling up
+
         header.style.transform = "translateY(0)";
     }
-    else{
+    if (currentScroll > lastScrollTop){
         header.style.transform = "translateY(-100%)";
     }
     
