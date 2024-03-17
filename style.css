@@ -12,63 +12,57 @@ body,html{
     --fs-600: 3rem;
   }
  }*/
-:root{
-  --fs-xl: 4rem;
-  --fs-600: 2rem;
+ :root {
+  --fs-xl:clamp(0.2rem, 3vw + 0.5rem, 8rem);
+  --fs-600: clamp(0.2rem, 1.5vw + 0.5rem, 3rem);
   --fs-500: 1.5rem;
   --fs-400: 1rem;
-  
 }
 
-
-@media (min-width: 15em) {
-  /* For medium-sized screens */
+@media (max-width: 80em) {
+  /* For extra-large-sized screens */
   :root {
-    --fs-xl: 1rem;
-    --fs-600: 0.5rem;
-    --fs-500: 0.25rem;
-    --fs-400: 0.1rem; /* Increase font size for larger emphasis */
-  }
-}
-@media (min-width: 20em) {
-  /* For medium-sized screens */
-  :root {
-    --fs-xl: 1.5rem;
-    --fs-600: 1.1rem;
-    --fs-500: 0.75rem;
-    --fs-400: 0.5rem; /* Increase font size for larger emphasis */
+    --fs-xl: clamp(0.2rem, 4vw + 0.5rem, 10rem);
+    --fs-600: 2rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1rem;
   }
 }
 
-@media (min-width: 40em) {
-  /* For medium-sized screens */
-  :root {
-    --fs-xl: 1.75rem;
-    --fs-600: 1.25rem;
-    --fs-500: 0.5rem;
-    --fs-400: 0.25rem; /* Increase font size for larger emphasis */
-  }
-}
-
-@media (min-width: 60em) {
+@media (max-width: 60em) {
   /* For large-sized screens */
   :root {
     --fs-xl: 2rem;
-    --fs-600: 2rem;
-    --fs-500: 1.5rem;
-    --fs-400: 1rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1rem;
+    --fs-400: 0.75rem;
   }
 }
 
-@media (min-width: 80em) {
-  /* For extra-large-sized screens */
+@media (max-width: 40em) {
+  /* For medium-sized screens */
   :root {
-    --fs-xl: 4rem;
-    --fs-600: 2rem;
-    --fs-500: 1.5rem;
-    --fs-400: 1rem;
+    --fs-xl: clamp(0.2rem, 4vw + 0.25rem, 2rem);
+    --fs-600: clamp(0.5rem, 2vw + 0.25rem, 1rem);
+    --fs-500: 0.5rem;
+    --fs-400: 0.25rem;
   }
 }
+
+@media (max-width: 20em) {
+  /* For small-sized screens */
+  :root {
+    --fs-xl: 0.75rem;
+    --fs-600: 0.5rem;
+    --fs-500: 0.3rem;
+    --fs-400: 0.25rem;
+  }
+}
+
+
+/* The rest of your CSS remains unchanged */
+
+
 
 
 
@@ -96,7 +90,7 @@ a {
   background: none;
   font-size: var(--fs-600);
   flex: 1;
-  margin-left: var(--fs-400);
+  margin-left: var(--fs-500);
 }
 
 
@@ -105,31 +99,29 @@ a {
   height: 50%;
   flex: 1;
   margin-left: var(--fs-400);
+  margin-right: var(--fs-400);
 }
 
 .github-mark{
   height: 100%;
   object-fit: cover;
   object-position: center;
-  
 
 }
 
 .title{
   color: white;
   flex: 4;
-  font-size: var(--fs-xl);
-  margin-left: auto;
-  margin-right: auto;
+  font-size: var(--fs-xl);  
+
 }
 
 .navigator{
-  flex: 2;
+  flex: 1;
 }
 
 .navigator-list{
   display: flex;
- 
   list-style-type: none;
   justify-content: space-between;
   font-size: var(--fs-600);
@@ -137,13 +129,16 @@ a {
 }
 
 .simulation{
+  flex: 1;
  font-size: var(--fs-600);
- margin-right: var(--fs-400);
+ margin-right: var(--fs-500);
+ 
 }
 
 .explanation{
+  flex: 1;
   font-size: var(--fs-600);
-  margin-right: var(--fs-600);
+  margin-right: var(--fs-500);
 }
 
 
