@@ -17,6 +17,11 @@ body,html{
   --fs-600: clamp(0.2rem, 1.5vw + 0.5rem, 3rem);
   --fs-500: 1.5rem;
   --fs-400: 1rem;
+
+  --color-1: rgb(0, 0, 0);
+  --color-2: rgb(82, 5, 123);
+  --color-3: rgb(137, 44, 220);
+  --color-4: rgb(188, 111, 241);
 }
 
 @media (max-width: 80em) {
@@ -73,7 +78,7 @@ a {
     
     display: flex;
     flex-direction: row;
-    border: solid 1px red;
+    border: solid 2px var(--color-4);
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -81,7 +86,7 @@ a {
     left: 0;
     width: 100%;
     height: 10vh;
-    background-color: black;
+    background-color: var(--color-1);
     transition: transform 0.3s ease;
 }
 
@@ -91,9 +96,13 @@ a {
   background: none;
   font-size: var(--fs-600);
   flex: 1;
-  margin-left: var(--fs-500);
+  text-align: center;
+  
 }
-
+.logo a{
+  color: var(--color-2);
+  
+}
 
 .code-link{
   background: none;
@@ -107,7 +116,6 @@ a {
   height: 100%;
   object-fit: cover;
   object-position: center;
-
 }
 
 .title{
@@ -119,6 +127,8 @@ a {
 
 .navigator{
   flex: 1;
+
+
 }
 
 .navigator-list{
@@ -126,21 +136,28 @@ a {
   list-style-type: none;
   justify-content: space-between;
   font-size: var(--fs-600);
+
+  
  
 }
 
 .simulation{
+ 
   flex: 1;
  font-size: var(--fs-600);
  margin-right: var(--fs-500);
  
 }
-
+.simulation a{
+  color: var(--color-2);
+}
 .explanation{
   flex: 1;
   font-size: var(--fs-600);
   margin-right: var(--fs-500);
 }
 
-
+.explanation a{
+  color: var(--color-2);
+}
 
